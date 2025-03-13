@@ -14,6 +14,7 @@ class MainActivity : AppCompatActivity() {
         typedArray.recycle()
 
         // Attach an instance of ImageDisplayFragment using factory method
+        supportFragmentManager.beginTransaction().replace(android.R.id.content, ImageDisplayFragment.newInstance(imageArray)).commit()
 
     }
 }
